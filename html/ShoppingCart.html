@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/ShoppingCart.css">
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<body>
+    <!--头部导航栏-->
+    <div class="container" id="ct1">
+        <div class="page-header">
+            <h1>欢迎访问我的购物网站<small>有问题请联系1074504362@qq.com</small></h1>
+        </div>
+    </div>
+    <div class="container" id="ct2">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <a href="../html/index.html" id="homea">
+                    <i class="glyphicon glyphicon-home"></i>
+                    Shopping system
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="ct3">
+        <div class="jumbotron">
+            <h1>Pay for it!</h1>
+            <p>^_^</p>
+        </div>
+        <div class="row">
+            <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
+                <span class="label label-success"><i class="glyphicon glyphicon-shopping-cart"></i>购物车</span>
+            </div>
+        </div>
+    </div>
+    <!--购物车商品-->
+    <div class="container" id="ct4">
+        <div class="goodsList">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                    <div class="thumbnail" id="SCgood1">
+                        <img v-bind:src="imgArray[SCindex].image">
+                        <div class="caption">
+                            <h3></h3>
+                            <p>{{Stars[SCindex].Star}}</p>
+                            <div>
+                                <span>{{Prices[SCindex].Name}}</span>
+                            </div>
+                            <div>
+                                <span>￥</span><span>{{Prices[SCindex].Price}}</span>
+                            </div>
+                            <button class="btn btn-warning">移除</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                    <div class="thumbnail" id="SCgood2">
+                        <img v-bind:src="imgArray[SCindex].image">
+                        <div class="caption">
+                            <h3></h3>
+                            <p>{{Stars[SCindex].Star}}</p>
+                            <div>
+                                <span>{{Prices[SCindex].Name}}</span>
+                            </div>
+                            <div>
+                                <span>￥</span><span>{{Prices[SCindex].Price}}</span>
+                            </div>
+                            <button class="btn btn-warning">移除</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                    <div class="thumbnail" id="SCgood3">
+                        <img v-bind:src="imgArray[SCindex].image">
+                        <div class="caption">
+                            <h3></h3>
+                            <p>{{Stars[SCindex].Star}}</p>
+                            <div>
+                                <span>{{Prices[SCindex].Name}}</span>
+                            </div>
+                            <div>
+                                <span>￥</span><span>{{Prices[SCindex].Price}}</span>
+                            </div>
+                            <button class="btn btn-warning">移除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="totalProce">total:xx ￥</div>
+        <nav aria-label="Page navigation" class="SCgoodsPage">
+            <ul class="pagination" id="SCshowPg">
+                <li>
+                    <a v-on:click="SCshowPgPre" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a v-on:click="SCshowPg1">1</a></li>
+                <li><a v-on:click="SCshowPg2">2</a></li>
+                <li><a v-on:click="SCshowPg3">3</a></li>
+                <li><a v-on:click="SCshowPg4">4</a></li>
+                <li>
+                    <a v-on:click="SCshowPgNext" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="pay"><button type="button" class="btn btn-success">￥支付</button></div>
+    </div>
+    <!--******************分割线***************************************************************************-->
+    <!--引入mock-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.1-beta3/mock-min.js"></script>
+    <!--引入Vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!--为了使用Bootstrap引入jquery-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/mock.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/Shopping.js"></script>
+</body>
+
+</html>

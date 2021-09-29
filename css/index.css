@@ -1,0 +1,69 @@
+body, html {
+    background: 0 36px repeat-y url(//img.alicdn.com/imgextra/i3/O1CN01PaQurJ1QgnAICTCgg_!!6000000002006-2-tps-1490-2984.png);
+    background-size: cover;
+}
+
+html {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+#homea:hover {
+    color: orange;
+}
+
+#ct2 {
+    color: orange;
+    height: 60px;
+    line-height: 60px;
+    font-size: 2rem;
+    overflow: auto;
+}
+
+#ct3 {
+    margin-bottom: 40px;
+}
+
+#ct4 {
+    margin-bottom: 40px;
+}
+
+#ct5 {
+    margin-bottom: 40px;
+}
+
+#ct5 #row1 {
+    margin-bottom: 20px;
+}
+
+#ct5 img {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#ct5 .des {
+    text-align: center;
+}
+
+#ct6 {
+    border: lightgray 1px solid;
+}
+
+
+
+.goodsPage {
+    text-align: center;
+}
+
+#ct6 p {
+    color: gold;
+}
